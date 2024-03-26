@@ -1,0 +1,132 @@
+INTERFACE:
+Pause
+E-Stop
+play
+
+Tabs:
+- Manage:
+Game Settings
+Live View of PC Information:
+- players cards
+- Players scores
+- Players Turn
+- Playing Direction
+- players names
+Live Camera View
+Shuffle Button
+Undo Play Button
+Reset Game Button
+Turn Number
+
+
+
+- Remote Play:
+Card Selection (Hilight Playable Cards)
+quantity of opponeonts cards (number)
+Representation of Game 
+Draw Button 
+Discard Button
+Current Score
+Players Turn
+Playing Direction
+players names
+Emotes:
+- Taunt Left Button
+- Taunt Right Button
+- Happy Button
+- Sad Button
+
+
+VARS:
+CardValues List string[] {{ID, Color, Val/Type, Score}}
+(ID Card identifying intiger, "0" means unknown)
+(Color the color of the card "YEL, RED, BLU, GRN, BLK")
+(Val/Type What the face value number is/What type of card:
+"0, 1, 2, 3, 4, 5, 6, 7, 8, 9, +2, SKP, REV, +4, WLD")
+(Score Point Value of the card: Number Cards(Face Val), +2(20), REV(20), SKP(20), WLD(50), +4(50))
+
+PlayerData List List[] {{Name, TurnCount, ID, ID.., LRPTerminator, ID, ID..}} 
+(Name Can Define which robot),
+(ID defines card ID and the ammount of IDs is the card count), 
+(LRPTerminator: How to deam where the card is in the phisical world, on the left of the LRPTerminator 
+all cards are in order by their Index in the sub-list in the left holding pile with the lowest index 
+being on the bottom of the pile. All cards on the right of the LRPTerminator are in the right holding 
+pile in order by their index with the lowest index being on top of the pile)
+
+CardPlayables List List<int>[] {{Playable ID, Playable ID..}}
+(Index = Card ID)
+(Sub list of ints list Card IDs that are playable to given Card ID(Lists Index))
+
+int WinningScore = 500; //Score threshold if playing by score
+int DeckQuantity = 112; //Amount of cards in a deck
+int PlayerQuantity = 2; //Amount of players
+string PlayersTurn = ""; //Current players turn
+string TurnDirection = "CW" //Current direction of play
+
+A550C_1
+A550_2
+FC006N_3
+
+000
+100
+010
+110
+001
+101
+111
+011
+
+
+
+Robot IO Config
+-A550C_1:
+2 = Limit Switch
+3 (IPIO=1)= Draw
+4 (IPIO=2)= Shuffle Left
+5 (IPIO=3)= Shuffle Right
+6 (IPIO=4)= Taunt Left
+7 (IPIO=5)= Taunt Right
+out4 (IPIO3=0)= Rready Signal
+Win = (6 (IPIO=4)) and (7 (IPIO=5))
+
+-A550_2:
+1 = Limit Switch
+8 (IPIO=6)= Draw
+9 (IPIO=7)= Shuffle Left
+10 (IPIO=8)= Shuffle Right
+11 (IPIO=9)= Taunt Left
+12 (IPIO=10)= Taunt Right
+out5 (IPIO3=1)= Rready Signal
+Win = (11 (IPIO=9)) and (12 (IPIO=10))
+
+-FC006N:
+1 = Limit Switch
+2 (IPIO=11)= Draw
+3 (IPIO=12)= Shuffle Left
+4 (IPIO=13)= Shuffle Rightb
+5 (IPIO=14)= Taunt Left
+6 (IPIO=15)= Taunt Right
+out7 (IPIO3=2)= Rready Signal
+Win = (5 (IPIO=14)) and (6 (IPIO=15))
+
+IPIO3=4: Light Screen NC
+
+640  x 480 
+3840 x 2160
+
+scl
+6 x 4.5
+
+dif
+3200 x 1680
+hlf
+1600 x 840
+
+
+FC006N_3 2 5 13 15 13 54 5 44 59 
+
+
+
+
+
+

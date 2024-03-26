@@ -1,0 +1,56 @@
+# Number of terms = 55
+0	Red Reverse
+1	Yellow 5
+2	Blue 8
+3	Yellow 1
+4	Red 5
+5	Green 0
+6	Green 5
+7	UNO
+8	Blue 0
+9	Green 2
+10	Yellow Skip
+11	Red 1
+12	Blue 3
+13	Red 9
+14	Green 8
+15	Red 2
+16	Blue Draw 2
+17	Blue Reverse
+18	Yellow 6
+19	Yellow 7
+20	Green Draw 2
+21	Red 7
+22	Green Reverse
+23	Yellow Draw 2
+24	Green 6
+25	Blue 7
+26	Red 4
+27	Yellow 3
+28	Green 7
+29	Green 4
+30	Red Draw 2
+31	Red 8
+32	Blue 6
+33	Green 1
+34	Yellow 8
+35	Wild Draw 4
+36	Red 0
+37	Blue 9
+38	Blue 5
+39	Red Skip
+40	Red 6
+41	Yellow 9
+42	Wild
+43	Blue 4
+44	Yellow 4
+45	Red 3
+46	Green 3
+47	Blue 1
+48	Green 9
+49	Yellow Reverse
+50	Blue Skip
+51	Yellow 2
+52	Blue 2
+53	Yellow 0
+54	Green Skip
